@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Gentle decorative animations for background illustrations */
+@keyframes bg-gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes bg-gentle-drift {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(6px, -6px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes bg-soft-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes bg-gentle-sway {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.animate-bg-float {
+  animation: bg-gentle-float 6s ease-in-out infinite;
+}
+
+.animate-bg-drift {
+  animation: bg-gentle-drift 8s ease-in-out infinite;
+}
+
+.animate-bg-twinkle {
+  animation: bg-soft-twinkle 4s ease-in-out infinite;
+}
+
+.animate-bg-sway {
+  animation: bg-gentle-sway 7s ease-in-out infinite;
+}
+
+/* Disable background animation on mobile or user preference to preserve performance */
+@media (max-width: 640px) {
+  .animate-bg-float,
+  .animate-bg-drift,
+  .animate-bg-twinkle,
+  .animate-bg-sway {
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bg-float,
+  .animate-bg-drift,
+  .animate-bg-twinkle,
+  .animate-bg-sway {
+    animation: none !important;
+  }
+}
+
+@media print {
+  header, 
+  #btn-open-theme-picker, 
+  #btn-print-timetable, 
+  .no-print, 
+  .theme-bg-layer,
+  #today-schedule-widget,
+  #print-modal-backdrop {
+    background: transparent !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #print-modal-backdrop {
+    position: static !important;
+    padding: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  #print-modal-container {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #printable-timetable-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 8mm 10mm;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Thời Khóa Biểu Học Tập Thông Minh",
+  "description": "Ứng dụng thời khóa biểu học tập linh hoạt theo tuần, chỉ sửa các buổi học bị thay đổi kèm bộ themes phong cách cho nam và nữ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
