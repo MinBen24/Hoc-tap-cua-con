@@ -21,11 +21,11 @@ export const PERIODS_CONFIG: PeriodDefinition[] = [
   { period: 5, session: 'morning', timeRange: '10h30 - 11h15', name: 'Tiết 5' },
 
   // BUỔI CHIỀU (theo ảnh: Tiết 2: 13h45-14h30, Tiết 3: 14h50-15h35, Tiết 4: 15h35-16h20, Tiết 5: 16h30-17h15)
-  { period: 6, session: 'afternoon', timeRange: '13h00 - 13h45', name: 'Tiết 1 (Chiều)' },
-  { period: 7, session: 'afternoon', timeRange: '13h45 - 14h30', name: 'Tiết 2 (Chiều)' },
-  { period: 8, session: 'afternoon', timeRange: '14h50 - 15h35', name: 'Tiết 3 (Chiều)' },
-  { period: 9, session: 'afternoon', timeRange: '15h35 - 16h20', name: 'Tiết 4 (Chiều)' },
-  { period: 10, session: 'afternoon', timeRange: '16h30 - 17h15', name: 'Tiết 5 (Chiều)' },
+  { period: 6, session: 'afternoon', timeRange: '13h00 - 13h45', name: 'Tiết 1' },
+  { period: 7, session: 'afternoon', timeRange: '13h45 - 14h30', name: 'Tiết 2' },
+  { period: 8, session: 'afternoon', timeRange: '14h50 - 15h35', name: 'Tiết 3' },
+  { period: 9, session: 'afternoon', timeRange: '15h35 - 16h20', name: 'Tiết 4' },
+  { period: 10, session: 'afternoon', timeRange: '16h30 - 17h15', name: 'Tiết 5' },
 ];
 
 export const BREAK_TIME_MORNING = 'Ra chơi: 8h30 - 8h50';

@@ -190,7 +190,7 @@ export const TodayCard: React.FC<TodayCardProps> = ({
                   <div>
                     {/* Period Name */}
                     <div className="text-[10px] text-slate-500 mb-1">
-                      <span className="font-bold">{item.period.name}</span>
+                      <span className="font-bold">{item.period.name} ({item.period.timeRange})</span>
                     </div>
 
                     {/* Subject & Room */}
